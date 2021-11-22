@@ -21,3 +21,29 @@ suspend:
 resume:
     insert("fg")
     key(enter)
+
+kill it: key(ctrl-c)
+clear screen: key(cmd-k)
+see dee: "cd "
+see dee up: "cd ../"
+see dee (dev|10): "cd ~/dev"
+list: "ls\n"
+list all: "ls -a\n"
+
+# rabbitmq
+connect rabbit: "kubectl exec -it searchviz-rabbit-0 -- bash\n"
+connect rabbit (1|one): "kubectl exec -it searchviz-rabbit-1 -- bash\n"
+stop rabbit: "rabbitmqctl stop_app\n"
+reset rabbit: "rabbitmqctl reset\n"
+start rabbit: "rabbitmqctl start_app\n"
+rabbit port forward: "kubectl port-forward svc/searchviz-rabbit 15674:15672\n"
+
+# mojolicious
+minion job: "./script/seo_pad minion job -f "
+
+# kubernetes
+cube get pods default: "kubectl get pods -n default\n"
+cube exec default: "kubectl exec -n default -it "
+
+# node
+node index: "node index.js"
